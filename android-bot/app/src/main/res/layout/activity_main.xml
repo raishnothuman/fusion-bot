@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="FUSION BOT"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:textColor="@color/accent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Fusion Blocks Auto-Player"
+            android:textSize="13sp"
+            android:textColor="@color/muted" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Checking service..."
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:textColor="@color/accent"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_card"
+            android:gravity="center" />
+
+        <!-- Enable Service Button (shown when not enabled) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:text="ENABLE ACCESSIBILITY SERVICE"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            app:backgroundTint="@color/warning"
+            android:textColor="@color/bg_dark"
+            app:cornerRadius="12dp"
+            android:visibility="gone" />
+
+        <!-- Big START / STOP Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartStop"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="28dp"
+            android:text="▶  START"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            app:backgroundTint="@color/card_bg"
+            android:textColor="@color/accent"
+            app:strokeColor="@color/accent"
+            app:strokeWidth="2dp"
+            app:cornerRadius="90dp" />
+
+        <!-- Speed Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="10dp"
+            android:text="SPEED"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:textColor="@color/muted" />
+
+        <!-- Speed Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:background="@drawable/bg_card"
+            android:padding="6dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSlow"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Slow"
+                android:textSize="11sp"
+                style="@style/SpeedButton"
+                android:layout_marginEnd="3dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMedium"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Med"
+                android:textSize="11sp"
+                style="@style/SpeedButton"
+                android:layout_marginEnd="3dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFast"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Fast"
+                android:textSize="11sp"
+                style="@style/SpeedButton"
+                android:layout_marginEnd="3dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTurbo"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Turbo"
+                android:textSize="11sp"
+                style="@style/SpeedButton"
+                android:layout_marginEnd="3dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMax"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="MAX"
+                android:textSize="11sp"
+                style="@style/SpeedButton" />
+        </LinearLayout>
+
+        <!-- Mode Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="PLAY MODE"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:textColor="@color/muted" />
+
+        <!-- Mode Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:background="@drawable/bg_card"
+            android:padding="6dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnModeTap"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="Tap"
+                android:textSize="13sp"
+                style="@style/SpeedButton"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnModeSwipe"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="Swipe"
+                android:textSize="13sp"
+                style="@style/SpeedButton"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnModeCombo"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="Combo"
+                android:textSize="13sp"
+                style="@style/SpeedButton" />
+        </LinearLayout>
+
+        <!-- Info box -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:text="After tapping START, switch to Fusion Blocks — the bot will auto-tap the game. Come back here to STOP it."
+            android:textSize="12sp"
+            android:textColor="@color/muted"
+            android:textAlignment="center"
+            android:lineSpacingExtra="4dp"
+            android:paddingHorizontal="8dp" />
+
+    </LinearLayout>
+</ScrollView>
