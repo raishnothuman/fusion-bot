@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fusion Bot</string>
+    <string name="accessibility_service_label">Fusion Bot Auto-Player</string>
+    <string name="accessibility_service_description">Allows Fusion Bot to automatically tap and swipe on the Fusion Blocks game screen to auto-play the game.</string>
+</resources>
