@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FusionBot" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/card_bg</item>
+        <item name="colorOnPrimary">@color/bg_dark</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+    </style>
+
+    <style name="SpeedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/muted</item>
+        <item name="strokeColor">@color/card_bg</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:backgroundTint">@color/bg_dark</item>
+    </style>
+</resources>
