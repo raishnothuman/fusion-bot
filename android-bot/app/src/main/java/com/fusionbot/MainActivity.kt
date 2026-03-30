@@ -150,9 +150,7 @@ class MainActivity : AppCompatActivity() {
             contentResolver,
             Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES
         ) ?: return false
-        return TextUtils.SimpleStringSplitter(':').also { it.setString(enabled) }
-            .asSequence()
-            .any { it.equals(expectedComp.flattenToString(), ignoreCase = true) }
+        return enabled.split(':').any { it.equals(expectedComp.flattenToString(), ignoreCase = true) }
     }
 
     private fun openAccessibilitySettings() {
